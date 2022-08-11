@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;700&display=swap');
+:root{
+    --white: #ffffff;
+    --leal: #2a2b3d;
+    --hex: #34b0be;
+    --hex-ceca: #d1ceca;
+    --blue-dark: #03051c; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: var(--blue-dark);
+    min-height: 100vh;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    height: 3.75rem;
+}
+
+#menu-icon{
+    color: white;
+}
+.nav--menu{
+    position: absolute;
+    width: 100%;
+    background-color: var(--blue-dark);
+    right: 0;
+    top: 80px;
+    min-height: calc(100vh - 80px);
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.5rem 1rem;
+    align-items: center;
+}
+
+.nav--item{
+    list-style: none;
+}
+
+.nav--link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: .5rem 1rem;
+}
+
+.nav--menu.visible{
+    display: flex;
+}
+
+.header-section{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.header-image{
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.header-presentation{
+    color: white;
+    position: absolute;
+    padding: 0.5rem 1.5rem;
+    text-align: left;
+}
+
+.presentation{
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+.presentation-one{
+    color: var(--hex);
+    font-size: 2.9rem;
+    font-weight: bold;
+}
+
+.presentation-two{
+    color: var(--hex);
+    font-size: 1rem;
+}
+
+.header-presentation:nth-child(odd){
+    top: 150px;
+    left: -10px;
+    font-weight: lighter;
+    font-size: 0.5;
+}
+
+.header-presentation:nth-child(2){
+    top: 50px;
+    left: -10px;
+}
+
+.header-presentation:nth-child(4){
+    top: 75px;
+    left: 250px ;
+}
+
+.social-media{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 6.5rem;
+    position: relative;
+    top: -305px;
+    left: 130px;
+    
+}
+
+.social-media-icon{
+    background-color: var(--hex-ceca);
+    border-radius: 50%;
+    width: 35px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header::before{
+    content: "";
+    display: block;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    background-color: var(--leal);
+    position: absolute;
+    top: 69px;
+    left: 54px;
+}
+
+.social-media::after{
+    content: "";
+    display: block;
+    width: 341px;
+    height: 84px;
+    position: absolute;
+    background-color: var(--leal);
+    top: 234px;
+    left: -127px;
+    border-radius: 10%;
+
+}
+
+.business{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    position: relative;
+    top: -133px;
+    
+}
+
+.business-icon{
+    background-color: var(--hex-ceca);
+    border-radius: 17%;
+    width: 64px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------------------- */
+
+.about-section{
+    padding: 2rem;
+    color: var(--hex);
+    position: relative;
+    top: -150px;
+    text-align: center;
+}
+
+.about--text{
+    padding: -0.5rem;
+    margin: 1rem 0;
+    color: var(--white);
+    
+}
+
+.habilies-section{
+    padding: 1.5rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.progress--info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.percent{
+    color: var(--white);
+    font-weight: bold;
+}
+
+.percentage{
+    color: var(--hex);
+}
+
+.progress-wrapper{
+    padding: .5rem 0;
+}
+
+progress::-webkit-progress-bar{
+    background-color: var(--white);
+    height: 1.25rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+progress{
+    width: 100%;
+    border-radius: 1rem;
+    background-color: var(--hex);
+    height: 1.25rem;
+    border-radius: 1rem;
+}
+
+progress::-webkit-progress-value{
+    background-color: var(--hex);
+    border-radius: 1rem;
+}
+
+progress::-moz-progress-bar{
+    background-color: var(--white);
+    border-radius: 1rem;
+}
