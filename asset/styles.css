@@ -21,36 +21,42 @@ img{
 
 body{
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 header{
     background-color: var(--blue-dark);
     min-height: 100vh;
+    position: relative;
+}
+
+h2{
+    color: var(--hex);
 }
 
 .nav{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0.5rem 1.5rem;
-    height: 3.75rem;
-}
-
-#menu-icon{
-    color: white;
+    padding: 0.5rem 1rem;
+    height: 80px;
+    /*box-shadow: 10px 5px 10px 4px ;*/
 }
 .nav--menu{
     position: absolute;
     width: 100%;
-    background-color: var(--blue-dark);
-    right: 0;
+    background-color: var(--white);
     top: 80px;
     min-height: calc(100vh - 80px);
     display: none;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 1.5rem 1rem;
     align-items: center;
+}
+
+.nav--menu.visible{
+    display: flex;
 }
 
 .nav--item{
@@ -58,31 +64,64 @@ header{
 }
 
 .nav--link{
-    color: white;
+    color: var(--blue-dark);
     text-decoration: none;
     font-size: 1.25rem;
     padding: .5rem 1rem;
 }
 
-.nav--menu.visible{
-    display: flex;
+#menu-icon{
+    color: var(--white);
 }
+
+/* SEUDO ELEMENTOS */
+/*
+.header::before{
+    content: "";
+    display: block;
+    background-color: var(--leal);
+    width: 290px;
+    max-width: 350px;
+    height: 290px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12%;
+    left: 27%;
+    margin: 0 auto;
+}
+
+.header::after{
+    content: "";
+    display: block;
+    width: 341px;
+    max-width: 349px;
+    height: 84px;
+    position: absolute;
+    border-radius: 7%;
+    top: 58%;
+    left: 23%;
+    background-color: var(--leal);
+    margin: 0 auto;
+}
+*/
+
+/* Section Presentacion */
 
 .header-section{
     padding: 1.5rem;
-    text-align: center;
 }
 
 .header-image{
     position: relative;
-    max-width: 350px;
+    max-width: 367px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .header-presentation{
-    color: white;
+    color: var(--white);
     position: absolute;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     text-align: left;
 }
 
@@ -103,20 +142,18 @@ header{
 }
 
 .header-presentation:nth-child(odd){
-    top: 150px;
-    left: -10px;
-    font-weight: lighter;
-    font-size: 0.5;
+    top: 196px;
+    left: 4%;
 }
 
 .header-presentation:nth-child(2){
-    top: 50px;
-    left: -10px;
+    top: 106px;
+    left: 3%;
 }
 
 .header-presentation:nth-child(4){
-    top: 75px;
-    left: 250px ;
+    top: 145px;
+    left: 64%;
 }
 
 .social-media{
@@ -125,44 +162,20 @@ header{
     align-items: center;
     padding: 1rem 6.5rem;
     position: relative;
-    top: -305px;
-    left: 130px;
-    
+    margin-top: 1rem;
+    top: -190px;
+    left: 37%;
 }
 
 .social-media-icon{
     background-color: var(--hex-ceca);
     border-radius: 50%;
     width: 35px;
-    height: 34px;
+    height: 35px;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.header::before{
-    content: "";
-    display: block;
-    width: 290px;
-    height: 290px;
-    border-radius: 50%;
-    background-color: var(--leal);
-    position: absolute;
-    top: 69px;
-    left: 54px;
-}
-
-.social-media::after{
-    content: "";
-    display: block;
-    width: 341px;
-    height: 84px;
-    position: absolute;
-    background-color: var(--leal);
-    top: 234px;
-    left: -127px;
-    border-radius: 10%;
-
 }
 
 .business{
@@ -171,7 +184,9 @@ header{
     align-items: center;
     padding: 1rem 2.5rem;
     position: relative;
-    top: -133px;
+    top: -105px;
+    max-width: 500px;
+    margin: 1rem auto 0 auto;
     
 }
 
@@ -184,13 +199,11 @@ header{
     justify-content: center;
     align-items: center;
 }
-/* ------------------------------- */
 
 .about-section{
     padding: 2rem;
     color: var(--hex);
     position: relative;
-    top: -150px;
     text-align: center;
 }
 
@@ -199,6 +212,32 @@ header{
     margin: 1rem 0;
     color: var(--white);
     
+}
+
+.services-section{
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--hex);
+}
+
+.services-cards{
+    background-color: var(--white);
+    padding: 1.5rem 1rem;
+    color:black;
+    font-size: 15px;
+}
+
+.services--cards-wrapper{
+    padding: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-img{
+    width: 41px;
+    height: 49px;
 }
 
 .habilies-section{
@@ -248,4 +287,45 @@ progress::-webkit-progress-value{
 progress::-moz-progress-bar{
     background-color: var(--white);
     border-radius: 1rem;
+}
+
+.portafolio-section{
+    text-align: center;
+}
+
+
+.portafolio-img{
+    width: 142px;
+    height: 115px;
+    padding: 0.5rem;
+}
+
+.portafolio-section-wrapper{
+    padding: 1rem 0;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.contact-section{
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.contact--section-wrapper{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-cards{
+    background-color: var(--white);
+    font-size: 1rem;
 }
