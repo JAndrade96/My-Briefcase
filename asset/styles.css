@@ -160,11 +160,12 @@ h2{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1rem 6.5rem;
     position: relative;
     margin-top: 1rem;
     top: -190px;
-    left: 37%;
+    gap: 1rem;
+    right: 0;
+    padding-right: 6.5rem;
 }
 
 .social-media-icon{
@@ -172,7 +173,6 @@ h2{
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,8 +184,10 @@ h2{
     align-items: center;
     padding: 1rem 2.5rem;
     position: relative;
-    top: -105px;
+    top: -45px;
     max-width: 500px;
+    background-color: grey;
+    border-radius: 1rem;
     margin: 1rem auto 0 auto;
     
 }
@@ -233,6 +235,7 @@ h2{
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    overflow-x: scroll;
 }
 
 .services-img{
@@ -328,4 +331,15 @@ progress::-moz-progress-bar{
 .contact-cards{
     background-color: var(--white);
     font-size: 1rem;
+}
+
+/* Responsividad */
+
+@media screen and (min-width: 678px) {
+    .nav--menu{
+        position: static;
+        opacity: 1;
+        background-color: transparent;
+        display: flex;
+    }
 }
