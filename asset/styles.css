@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;700&display=swap');
+
+@import url(./responsive.css);
+
 :root{
     --white: #ffffff;
     --leal: #2a2b3d;
@@ -32,6 +35,7 @@ header{
 
 h2{
     color: var(--hex);
+    font-size: 1.9rem;
 }
 
 .nav{
@@ -40,7 +44,6 @@ h2{
     align-items: center;
     padding: 0.5rem 1rem;
     height: 80px;
-    /*box-shadow: 10px 5px 10px 4px ;*/
 }
 .nav--menu{
     position: absolute;
@@ -53,6 +56,7 @@ h2{
     justify-content: space-around;
     padding: 1.5rem 1rem;
     align-items: center;
+    z-index: 30;
 }
 
 .nav--menu.visible{
@@ -74,39 +78,6 @@ h2{
     color: var(--white);
 }
 
-/* SEUDO ELEMENTOS */
-/*
-.header::before{
-    content: "";
-    display: block;
-    background-color: var(--leal);
-    width: 290px;
-    max-width: 350px;
-    height: 290px;
-    border-radius: 50%;
-    position: absolute;
-    top: 12%;
-    left: 27%;
-    margin: 0 auto;
-}
-
-.header::after{
-    content: "";
-    display: block;
-    width: 341px;
-    max-width: 349px;
-    height: 84px;
-    position: absolute;
-    border-radius: 7%;
-    top: 58%;
-    left: 23%;
-    background-color: var(--leal);
-    margin: 0 auto;
-}
-*/
-
-/* Section Presentacion */
-
 .header-section{
     padding: 1.5rem;
 }
@@ -116,8 +87,32 @@ h2{
     max-width: 367px;
     margin: 0 auto;
     align-items: center;
+    top: -235px;
 }
 
+.circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    max-width: 920px;
+    margin: 0 auto;
+    align-items: center;
+    background-color: var(--leal);
+    position: relative;
+    top: 31px;
+    display: flex;
+}
+
+.line{
+    height: 2px;
+    background-color: var(--white);
+    width: 146px;
+    position: relative;
+    left: 5%;
+    top: -149px;
+    display: flex;
+    max-width: 400px;
+}
 .header-presentation{
     color: var(--white);
     position: absolute;
@@ -141,31 +136,40 @@ h2{
     font-size: 1rem;
 }
 
-.header-presentation:nth-child(odd){
-    top: 196px;
-    left: 4%;
+
+.firs{
+    top: -493px;
+    left: -3%;
+    margin: 0 auto;
+    max-width: 340px;
+    position: relative;
 }
 
-.header-presentation:nth-child(2){
-    top: 106px;
+.second{
+    top: 200px;
     left: 3%;
+    top: -499px;
+    left: -3%;
+    margin: 0 auto;
+    max-width: 340px;
+    position: relative;
 }
 
-.header-presentation:nth-child(4){
-    top: 145px;
-    left: 64%;
+.third{
+    top: 126px;
+    left: 59%;
+    margin: 0 auto;
+    max-width: 420px;
 }
 
 .social-media{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: flex-end;
     position: relative;
-    margin-top: 1rem;
-    top: -190px;
+    margin: 0 auto;
+    top: -576px;
     gap: 1rem;
-    right: 0;
-    padding-right: 6.5rem;
+    max-width: 420px;
 }
 
 .social-media-icon{
@@ -184,9 +188,9 @@ h2{
     align-items: center;
     padding: 1rem 2.5rem;
     position: relative;
-    top: -45px;
+    top: -442px;
     max-width: 500px;
-    background-color: grey;
+    background-color: var(--leal);
     border-radius: 1rem;
     margin: 1rem auto 0 auto;
     
@@ -207,6 +211,7 @@ h2{
     color: var(--hex);
     position: relative;
     text-align: center;
+    top: -400px;
 }
 
 .about--text{
@@ -220,6 +225,8 @@ h2{
     text-align: center;
     padding: 1.5rem 1rem;
     color: var(--hex);
+    top: -400px;
+    position: relative;
 }
 
 .services-cards{
@@ -235,7 +242,7 @@ h2{
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 .services-img{
@@ -247,6 +254,8 @@ h2{
     padding: 1.5rem;
     color: var(--white);
     text-align: center;
+    position: relative;
+    top: -400px;
 }
 
 .progress--info{
@@ -294,6 +303,8 @@ progress::-moz-progress-bar{
 
 .portafolio-section{
     text-align: center;
+    position: relative;
+    top: -400px;
 }
 
 
@@ -317,6 +328,8 @@ progress::-moz-progress-bar{
 .contact-section{
     text-align: center;
     padding: 1.5rem 1rem;
+    position: relative;
+    top: -400px;
 }
 
 .contact--section-wrapper{
@@ -331,15 +344,39 @@ progress::-moz-progress-bar{
 .contact-cards{
     background-color: var(--white);
     font-size: 1rem;
+    font-weight: bold;
+    width: 170px;
+    height: 119px;
+    border-radius: 0.2rem;
+    padding: 1rem;
 }
 
-/* Responsividad */
+.p-font{
+    font-size: 0.6rem; 
+    font-weight: lighter;
+    color: gray;
+}
 
-@media screen and (min-width: 678px) {
-    .nav--menu{
-        position: static;
-        opacity: 1;
-        background-color: transparent;
-        display: flex;
-    }
+.contact-left{
+    position: relative;
+    left: -26%;
+}
+
+.contact-right{
+    position: relative;
+    left: 29%;
+}
+
+.section-footer{
+    background-color: var(--leal);
+    padding: 3rem;
+    margin: 0 -1rem;
+    position: relative;
+    top: 425px;
+}
+
+.footer{
+    color: var(--hex);
+    padding-right: 15px;
+    padding-left: 15px;
 }
