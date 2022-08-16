@@ -9,37 +9,37 @@
     <link rel="stylesheet" href="./asset/styles.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
     <nav class="nav">
         <i id="menu-icon" class="fa-solid fa-bars fa-lg"></i>
         <ul class="nav--menu">
           <li class="nav--item">
-             <a href="#" class="nav--link">
+             <a href="#header" class="nav--link">
                 Home
              </a>
           </li>
           <li class="nav--item">
-             <a href="#" class="nav--link">
-                Servicio
-             </a>
-          </li>
-          <li class="nav--item">
-             <a href="#" class="nav--link">
+             <a href="#about" class="nav--link">
                 Acerca de Mi
              </a>
           </li>
           <li class="nav--item">
-            <a href="#" class="nav--link">
+             <a href="#services" class="nav--link">
+                Servicios
+             </a>
+          </li>
+          <li class="nav--item">
+            <a href="#habilies" class="nav--link">
                Mis Habilidades
             </a>
          </li>
          <li class="nav--item">
-            <a href="#" class="nav--link">
+            <a href="#portafolio" class="nav--link">
                Mi Portafolio
             </a>
          </li>
          <li class="nav--item">
-            <a href="#" class="nav--link">
+            <a href="#contact" class="nav--link">
                Contacto
             </a>
          </li>
@@ -47,11 +47,12 @@
 </nav>
 <section class="header-section">
    <div class="circle"></div>
-   <div class="line"></div>
+   <!-- <div class="line"></div> -->
     <div class="header-image">
         <img src="./asset/img/Foto para Portafolio.png" alt="">
     </div>
     <div class="header-presentation firs">
+      <div class="line"></div>
       <h6 class="presentation">Soy</h6>
       <p class="presentation-one">Carlos</p>
     </div>
@@ -87,7 +88,7 @@
     </div>
 </section>
     <main>
-      <section class="about-section">
+      <section class="about-section" id="about">
          <h2>Acerca de mí</h2>
          <p class="about--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
             Beatae voluptatum omnis et dignissimos, eaque facilis aperiam doloribus 
@@ -95,27 +96,27 @@
             tempora dolores temporibus sit eum eos quas consequatur ex? Magnam maxime rerum ab dolorum labore incidunt unde sint.
          </p>
       </section>
-      <section class="services-section">
+      <section class="services-section" id="services">
          <h2>Servicios</h2>
          <div class="services--cards-wrapper">
          <article class="services-cards">
             <img class="services-img" src="./asset/icon/iconoir_design-pencil.svg" alt="">
             <h5>UX/UI Desing</h5>
-            <p>Desde diseño hasta implementacion de desarrollo</p>
+            <p class="services-font">Desde diseño hasta implementacion de desarrollo</p>
          </article>
          <article class="services-cards">
             <img class="services-img" src="./asset/icon/majesticons_speakerphone-line.svg" alt="">
             <h5>UX/UI Desing</h5>
-            <p>Desde diseño hasta implementacion de desarrollo</p>
+            <p class="services-font">Desde diseño hasta implementacion de desarrollo</p>
          </article>
          <article class="services-cards">
             <img class="services-img" src="./asset/icon/feather_search.svg" alt="">
             <h5>UX/UI Desing</h5>
-            <p>Desde diseño hasta implementacion de desarrollo</p>
+            <p class="services-font">Desde diseño hasta implementacion de desarrollo</p>
          </article>
          </div>
       </section>
-   <section class="habilies-section">
+   <section class="habilies-section" id="habilies">
       <h2>Mis habilidades</h2>
       <div class="progress-wrapper">
          <div class="progress--info">
@@ -139,7 +140,7 @@
          <progress max="100" value="80" class="progress--bar"></progress>
       </div>
    </section>
-   <section class="portafolio-section">
+   <section class="portafolio-section" id="portafolio">
       <h2>Mis Portafolio</h2>
       <div class="portafolio-section-wrapper">
       <img class="portafolio-img" src="./asset/img/Rectangle 65.jpg" alt="">
@@ -147,7 +148,7 @@
       <img class="portafolio-img" src="./asset/img/Rectangle 53.jpg" alt="">
       </div>
    </section>
-   <section class="contact-section">
+   <section class="contact-section" id="contact">
       <h2>Contacto</h2>
       <div class="contact--section-wrapper">
          <article class="contact-cards contact-left">

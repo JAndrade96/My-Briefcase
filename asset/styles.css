@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;700&display=swap');
 
-@import url(./responsive.css);
-
 :root{
     --white: #ffffff;
     --leal: #2a2b3d;
@@ -48,9 +46,10 @@ h2{
 .nav--menu{
     position: absolute;
     width: 100%;
-    background-color: var(--white);
-    top: 80px;
-    min-height: calc(100vh - 80px);
+    background-color: var(--hex-ceca);
+    top: 72px;
+    left: 0;
+    min-height: calc(102vh - 80px);
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -80,6 +79,7 @@ h2{
 
 .header-section{
     padding: 1.5rem;
+    margin-top: -3rem;
 }
 
 .header-image{
@@ -96,7 +96,6 @@ h2{
     border-radius: 50%;
     max-width: 920px;
     margin: 0 auto;
-    align-items: center;
     background-color: var(--leal);
     position: relative;
     top: 31px;
@@ -106,12 +105,11 @@ h2{
 .line{
     height: 2px;
     background-color: var(--white);
-    width: 146px;
-    position: relative;
+    width: 135px;
+    position: absolute;
     left: 5%;
-    top: -149px;
-    display: flex;
-    max-width: 400px;
+    top: 88px;
+    margin: 0 auto;
 }
 .header-presentation{
     color: var(--white);
@@ -156,10 +154,13 @@ h2{
 }
 
 .third{
-    top: 126px;
-    left: 59%;
+    top: -604px;
+    left: 1%;
+    position: relative;
+    display: grid;
     margin: 0 auto;
-    max-width: 420px;
+    max-width: 386px;
+    justify-content: flex-end;
 }
 
 .social-media{
@@ -167,7 +168,8 @@ h2{
     justify-content: flex-end;
     position: relative;
     margin: 0 auto;
-    top: -576px;
+    top: -606px;
+    left: 22px;
     gap: 1rem;
     max-width: 420px;
 }
@@ -188,7 +190,7 @@ h2{
     align-items: center;
     padding: 1rem 2.5rem;
     position: relative;
-    top: -442px;
+    top: -493px;
     max-width: 500px;
     background-color: var(--leal);
     border-radius: 1rem;
@@ -234,20 +236,26 @@ h2{
     padding: 1.5rem 1rem;
     color:black;
     font-size: 15px;
+    border-radius: 0.1rem;
 }
 
 .services--cards-wrapper{
     padding: 1rem 0;
     display: flex;
     gap: 1rem;
-    justify-content: center;
-    align-items: center;
     overflow-x: auto;
 }
 
 .services-img{
     width: 41px;
     height: 49px;
+}
+
+.services-font{
+    color: var(--hex-ceca);
+    font-size: 0.7rem;
+    padding: 1rem;
+    margin: 0 auto;
 }
 
 .habilies-section{
@@ -309,9 +317,12 @@ progress::-moz-progress-bar{
 
 
 .portafolio-img{
-    width: 142px;
-    height: 115px;
+    width: 232px;
+    height: 187px;
     padding: 0.5rem;
+    position: relative;
+    margin: 0 auto;
+    max-width: 298px;
 }
 
 .portafolio-section-wrapper{
@@ -320,7 +331,6 @@ progress::-moz-progress-bar{
     margin: 0 auto;
     display: flex;
     gap: 1rem;
-    justify-content: center;
     align-items: center;
     overflow-x: auto;
 }
@@ -337,8 +347,10 @@ progress::-moz-progress-bar{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    justify-content: center;
     align-items: center;
+    position: relative;
+    margin: 0 auto;
+    max-width: 530px;
 }
 
 .contact-cards{
@@ -349,12 +361,6 @@ progress::-moz-progress-bar{
     height: 119px;
     border-radius: 0.2rem;
     padding: 1rem;
-}
-
-.p-font{
-    font-size: 0.6rem; 
-    font-weight: lighter;
-    color: gray;
 }
 
 .contact-left{
@@ -373,10 +379,71 @@ progress::-moz-progress-bar{
     margin: 0 -1rem;
     position: relative;
     top: 425px;
+    margin-top: -13rem;
 }
 
 .footer{
     color: var(--hex);
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.p-font{
+    font-size: 0.6rem; 
+    font-weight: lighter;
+    color: var(--hex-ceca);
+}
+
+/* SCROLL BODY */
+
+body::-webkit-scrollbar{
+    width: 7px;
+    background: var(--blue-dark);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--hex-ceca);
+    border-radius: 1rem;
+}
+
+
+/* Responsividad */
+
+@media screen and (min-width: 678px) {
+    .nav--menu{
+
+        position: static;
+        display: contents;
+        background-color: var(--blue-dark);
+        justify-content: flex-end;
+    }
+
+    .nav--link{
+        color: var(--white);
+        font-size: 0.7rem;
+    }
+
+    #menu-icon{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .services--cards-wrapper{
+        justify-content: center;
+        height: 20rem;
+        gap: 2rem;
+        display: flex;
+    }
+
+    .portafolio-section-wrapper{
+        justify-content: center;
+    }
+
+    .portafolio-img{
+        width: 30rem;
+        height: 20rem;
+        gap: 3rem;
+    }
 }
