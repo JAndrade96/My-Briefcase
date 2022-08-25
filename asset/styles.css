@@ -183,6 +183,10 @@ h2{
     align-items: center;
 }
 
+.git{
+    width: 20px;
+}
+
 .business{
     display: flex;
     justify-content: space-evenly;
@@ -205,6 +209,11 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 160ms ease-in-out 0s;
+}
+
+.business-icon:hover{
+    transform: scale(1.5);
 }
 
 .about-section{
