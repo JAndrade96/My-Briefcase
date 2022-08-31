@@ -84,7 +84,7 @@ h2{
 
 .header-image{
     position: relative;
-    max-width: 367px;
+    max-width: 272px;
     margin: 0 auto;
     align-items: center;
     top: -235px;
@@ -137,18 +137,18 @@ h2{
 
 .firs{
     top: -493px;
-    left: -6%;
+    left: -10%;
     margin: 0 auto;
-    max-width: 340px;
+    max-width: 320px;
     position: relative;
 }
 
 .second{
     top: 200px;
-    left: -6%;
+    left: -10%;
     top: -499px;
     margin: 0 auto;
-    max-width: 340px;
+    max-width: 326px;
     position: relative;
 }
 
@@ -257,6 +257,7 @@ h2{
 .services-img{
     width: 41px;
     height: 49px;
+    color: var(--hex);
 }
 
 .services-font{
