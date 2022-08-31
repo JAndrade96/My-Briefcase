@@ -181,7 +181,13 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 160ms ease-in-out 0s;
 }
+
+.social-media-icon:hover{
+    transform: scale(1.5);
+}
+
 
 .git{
     width: 20px;
